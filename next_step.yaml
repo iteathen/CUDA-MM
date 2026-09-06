@@ -1,21 +1,37 @@
-schema: cuda-mm.next-step/0.1
-status: architecture-bootstrap
+schema: cuda-mm.next-step/0.2
+status: consumer-assessment-gated
 updated: 2026-09-06
 
 current:
-  issue: 1
-  title: Establish CUDA-MM architecture ownership
+  issue: 4
+  title: Falsify one domain-neutral memory constraint and physical-plan model
   outcome: >-
-    Integrate the charter, ADR and SPEC-0001 boundary without adding production
-    allocator/planner source or moving native/logical-liveness ownership.
+    Assess current protected CUDA-JS-Tensor and CUDA-MCGS planning/resource evidence.
+    Project only domain-neutral physical constraints and determine whether one reusable
+    CUDA-MM contract survives materially different consumers without learning consumer
+    vocabulary or moving logical liveness.
+
+completed:
+  architecture_bootstrap_issue: 1
+  ownership_authority:
+    - CUDA-MM SPEC-0001 and ADR-0001
+    - CUDA-JS SPEC-0033
+    - CUDA-JS-Tensor SPEC-0013
+    - CUDA-MCGS SPEC-0016
+  current_state_routing:
+    - cuda-data
+    - cuda-io
+    - cuda-media
+    - cuda-ray
+    - UCI-Arena-Vector
 
 parallel_governance:
   issue: 2
   status: main_unprotected_control_plane_alignment_open
   evidence: >-
-    Live GitHub readback after the initial repository commit reports main exists and
-    protected=false. Repository settings do not yet match the established CUDA-family
-    baseline. Do not claim protected-main parity until a later readback proves it.
+    Live GitHub readback after architecture integration still reports CUDA-MM main
+    protected=false. Do not claim CUDA-family governance parity until repository
+    controls are actually corrected and a later readback proves it.
 
 activation:
   gate_issue: 3
@@ -33,16 +49,17 @@ constraints:
   - CUDA-MM remains JavaScript/TypeScript plus separately accepted restricted Device-JS only.
   - No Python, C/C++, CUDA C++, hand PTX, native FFI/addons, CUDA ABI/header ownership or private lower imports.
   - Existing CUDA-JS pinned/registered-host, managed-memory and P2P issues remain CUDA-JS-owned.
-  - Repository creation and provider availability are not implementation authority.
+  - Do not migrate existing Tensor/MCGS/data planners merely because CUDA-MM now has an owner.
+  - Repository creation, accepted ownership and provider availability are not production implementation authority.
 
 sequence:
-  - Integrate issue #1 architecture documents and cross-repository ownership references.
-  - Keep issue #2 independent until repository settings can be corrected and read back.
   - Execute issue #4 against current protected Tensor and CUDA-MCGS evidence.
+  - Classify every candidate constraint/decision by natural owner and run deletion tests.
   - Feed the assessment into issue #3 and explicitly activate or park production CUDA-MM.
   - If activated, accept the smallest bounded semantic/profile specification before source/API work.
+  - Keep issue #2 independent until repository settings are corrected and read back.
 
 blocked_implementation:
   reason: >-
-    Cross-domain reusable physical-memory policy has a natural owner now, but a production
+    Cross-domain physical-memory policy now has an accepted owner, but a production
     abstraction has not yet been demonstrated strongly enough to justify implementation.
