@@ -1,6 +1,6 @@
 # CUDA-MM Project Charter
 
-**Status:** Architecture/ownership bootstrap candidate; production implementation not authorized.
+**Status:** Accepted architecture/ownership authority; production implementation not authorized.
 
 ## Purpose
 
