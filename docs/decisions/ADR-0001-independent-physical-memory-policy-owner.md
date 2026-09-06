@@ -1,6 +1,6 @@
 # ADR-0001: Independent Cross-Domain Physical Memory-Policy Owner
 
-**Status:** Candidate for bootstrap acceptance
+**Status:** Accepted
 **Date:** 2026-09-06
 
 ## Context
