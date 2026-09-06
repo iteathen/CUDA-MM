@@ -10,6 +10,8 @@ Use the governing cycle for every meaningful unit:
 
 Use `LEGO -> SOLID -> CUPID -> KISS` and preserve one visible owner for every semantic/resource/lifecycle fact.
 
+LEGO is the outer architecture rule: ownership, universality, replaceability, scope containment, damage-limiting encapsulation, and context containment. A LEGO is too large when one agent cannot hold its complete authoritative working set—contract, implementation, invariants, lifecycle/resource/failure rules, tests/conformance, and immediate dependency/consumer interfaces—in focused attention with substantial headroom for reasoning and review. Context fit is a first-class boundary criterion alongside semantic, lifecycle, resource/failure, substitution, and change cohesion. When exceeded, recursively split at the strongest real seam or narrow scope; do not create arbitrary modules that duplicate truth or require cross-boundary internal knowledge. Inside a valid LEGO, SOLID structures responsibilities and dependency direction, CUPID shapes the implementation, and KISS removes remaining unjustified complexity; lower levels may not defeat higher ones.
+
 ## Repository role
 
 CUDA-MM is the reserved JavaScript/TypeScript owner for reusable **cross-domain physical memory-management policy** above public CUDA-JS.
