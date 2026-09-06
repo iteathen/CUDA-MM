@@ -1,6 +1,6 @@
 # SPEC-0001: Native Boundary and Cross-Domain Physical Memory Policy
 
-**Status:** Architecture/ownership authority candidate; production CUDA-MM profiles remain separately gated.
+**Status:** Accepted architecture/ownership authority; production CUDA-MM profiles remain separately gated.
 
 **Version:** 1.0.0
 
