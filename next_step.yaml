@@ -1,0 +1,48 @@
+schema: cuda-mm.next-step/0.1
+status: architecture-bootstrap
+updated: 2026-09-06
+
+current:
+  issue: 1
+  title: Establish CUDA-MM architecture ownership
+  outcome: >-
+    Integrate the charter, ADR and SPEC-0001 boundary without adding production
+    allocator/planner source or moving native/logical-liveness ownership.
+
+parallel_governance:
+  issue: 2
+  status: main_unprotected_control_plane_alignment_open
+  evidence: >-
+    Live GitHub readback after the initial repository commit reports main exists and
+    protected=false. Repository settings do not yet match the established CUDA-family
+    baseline. Do not claim protected-main parity until a later readback proves it.
+
+activation:
+  gate_issue: 3
+  consumer_assessment_issue: 4
+  production_authorized: false
+  rule: >-
+    Production CUDA-MM requires either two materially different consumers sharing one
+    domain-neutral physical-memory policy contract or one exceptionally strong consumer
+    whose abstraction survives deletion and ownership tests, followed by an accepted
+    bounded production specification.
+
+constraints:
+  - CUDA-JS is the sole native CUDA/provider owner.
+  - Semantic consumers retain logical resource meaning and liveness.
+  - CUDA-MM remains JavaScript/TypeScript plus separately accepted restricted Device-JS only.
+  - No Python, C/C++, CUDA C++, hand PTX, native FFI/addons, CUDA ABI/header ownership or private lower imports.
+  - Existing CUDA-JS pinned/registered-host, managed-memory and P2P issues remain CUDA-JS-owned.
+  - Repository creation and provider availability are not implementation authority.
+
+sequence:
+  - Integrate issue #1 architecture documents and cross-repository ownership references.
+  - Keep issue #2 independent until repository settings can be corrected and read back.
+  - Execute issue #4 against current protected Tensor and CUDA-MCGS evidence.
+  - Feed the assessment into issue #3 and explicitly activate or park production CUDA-MM.
+  - If activated, accept the smallest bounded semantic/profile specification before source/API work.
+
+blocked_implementation:
+  reason: >-
+    Cross-domain reusable physical-memory policy has a natural owner now, but a production
+    abstraction has not yet been demonstrated strongly enough to justify implementation.
