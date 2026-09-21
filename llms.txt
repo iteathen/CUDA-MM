@@ -1,0 +1,20 @@
+# CUDA-MM
+
+> Public source index for LLMs and software agents. Read-only access requires no GitHub authentication.
+
+## Primary entry points
+
+- [README.md](https://raw.githubusercontent.com/iteathen/CUDA-MM/main/README.md): project overview and documentation entry point.
+- [AGENTS.md](https://raw.githubusercontent.com/iteathen/CUDA-MM/main/AGENTS.md): repository-specific agent instructions and authority rules.
+- [Agent access](https://raw.githubusercontent.com/iteathen/CUDA-MM/main/.agent/ACCESS.md): anonymous access routes and precedence notes.
+- [LICENSE](https://raw.githubusercontent.com/iteathen/CUDA-MM/main/LICENSE): license terms.
+
+## Anonymous source access
+
+- Repository: https://github.com/iteathen/CUDA-MM
+- Git clone: `https://github.com/iteathen/CUDA-MM.git`
+- Raw files: https://raw.githubusercontent.com/iteathen/CUDA-MM/main/
+- ZIP snapshot: https://codeload.github.com/iteathen/CUDA-MM/zip/refs/heads/main
+- tar.gz snapshot: https://codeload.github.com/iteathen/CUDA-MM/tar.gz/refs/heads/main
+
+Prefer Git, raw HTTPS, or codeload over the GitHub REST API when possible. Follow repository-local authority and agent instructions.
