@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "repository": "iteathen/CUDA-MM",
+  "claims": [
+    {
+      "id": "CUDA-MM-PLAN-001",
+      "claim": "Intended project scope is optional reusable cross-domain physical memory-management policy above CUDA-JS.",
+      "evidence_class": "UNVALIDATED",
+      "status": "architecture bootstrap / activation gated",
+      "oracle": "Repository charter and architecture decisions",
+      "revision": "main",
+      "falsifier": "Cross-consumer evidence fails to justify a reusable policy layer, or an accepted decision changes the boundary.",
+      "evidence": [
+        "README.md",
+        "STATUS.md",
+        "docs/PROJECT_CHARTER.md"
+      ],
+      "limitations": [
+        "No production CUDA-MM API, demonstrated cross-consumer need, native-provider behavior, or performance benefit is established."
+      ],
+      "external_reproduction": false
+    }
+  ]
+}
